@@ -9,6 +9,7 @@ fn main() {
     // create random number between 1 and 100 (gen_range includes the first and excludes the last params)
     let secret_number = rand::thread_rng().gen_range(1,101);
     
+    //https://doc.rust-lang.org/rust-by-example/flow_control/loop.html
     loop{        
         println!("Enter a number:");
         
@@ -34,6 +35,7 @@ fn main() {
         println!("your input: {}", input);
     
         // Compare input with cmp method with secret_number, that the possible result to compare number is a Enum Less, Greater or equal from Ordering
+        // https://doc.rust-lang.org/rust-by-example/flow_control/match.html
         match input.cmp(&secret_number){
             // this is an Enum from Ordering, I thik it is like an callback from result to match, or something
             Ordering::Less => println!("Number is less!"),
