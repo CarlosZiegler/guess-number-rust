@@ -4,32 +4,32 @@ use std::cmp::Ordering; // import statement
 use rand::Rng;
 
 fn main() {
-    println!("Advinhe um numero");
+    println!("Guess the number");
     let secret_number = rand::thread_rng().gen_range(1,101);
     
     loop{        
-        println!("Digite seu palpite");
+        println!("Enter a number:");
     
         let mut input = String::new();
     
         io::stdin().read_line(&mut input)
-            .expect("Falha ao ler entrada");
+            .expect("Error while reading input!");
         
         let input: u32 = match input.trim().parse() {
             Ok(num)=> num,
             Err(_) => {
-                println!("{} nao e um numero!", input.trim());
+                println!("{} not a number!", input.trim());
                 continue
             },
         };
     
-        println!("Voce disse {}", input);
+        println!("your input: {}", input);
     
         match input.cmp(&secret_number){
-            Ordering::Less => println!("Muito baixo!"),
-            Ordering::Greater => println!("Muito alto!"),
+            Ordering::Less => println!("Number is less!"),
+            Ordering::Greater => println!("Number is greater!"),
             Ordering::Equal => {
-                println!("Voce acertou!");
+                println!("Gotcha!");
                 break;
             }
         }
