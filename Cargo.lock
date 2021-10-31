@@ -6,7 +6,7 @@ version = 3
 name = "advinhacao-game"
 version = "0.1.0"
 dependencies = [
- "rand 0.3.23",
+ "rand",
 ]
 
 [[package]]
@@ -20,16 +20,6 @@ name = "libc"
 version = "0.2.106"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a60553f9a9e039a333b4e9b20573b9e9b9c0bb3a11e201ccc48ef4283456d673"
-
-[[package]]
-name = "rand"
-version = "0.3.23"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "64ac302d8f83c0c1974bf758f6b041c6c8ada916fbb44a609158ca8b064cc76c"
-dependencies = [
- "libc",
- "rand 0.4.6",
-]
 
 [[package]]
 name = "rand"
